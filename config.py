@@ -12,8 +12,9 @@ class Param:
         self.args = all_args
 
     def all_param(self, parser):
-
         parser.add_argument("--max_sen_len", default=300, type=int)
         parser.add_argument("--batch_size", default=32, type=int)
+        parser.add_argument("--lr", default=0.001, type=float)
+        parser.add_argument("--epochs", default=10, type=int)
 
         return parser

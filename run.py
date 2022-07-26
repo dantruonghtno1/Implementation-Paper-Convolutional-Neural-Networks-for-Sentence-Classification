@@ -57,7 +57,6 @@ def run(args):
     cnn_model.to('cuda:0')
     loss_fn = nn.CrossEntropyLoss()
     optimizer = optim.Adam(cnn_model.parameters(), lr=args.lr)
-    num_epochs = args.num_epoch
     train(args, cnn_model, optimizer, train_dataloader, val_dataloader, word2vec, padding_token, unk_token)
 
 
