@@ -20,7 +20,7 @@ def make_word2vec_vector_cnn(args, sentence):
     out = torch.Tensor(np.concatenate(padded_X))
     out.required_grad = False
     return out
-    
+
 
 def create_batch_data(args, X, Y):
     batches_X = []
@@ -49,23 +49,20 @@ def create_batch_data(args, X, Y):
 def make_word2vec_vector_cnn(args, batch):
     batch_token = []
     batch_label = []
-#     print('batch ', batch[1])
-    
+
     batch_label = torch.Tensor(np.array(batch[1]))
     batch_label = batch_label.to('cuda:0')
     for sentence in batch[0]:
-        padded_X = [padding_token for i in range(max_sen_len)]
+        padded_X = [padding_token for i in range(args.max_sen_len)]
         i = 0
         for idx, word in enumerate(sentence):
-            if idx < max_sen_len:
+            if idx < args.max_sen_len:
                 if word not in word2vec:
                     padded_X[i] = unk_token
                 else:
                     padded_X[i] = np.resize(word2vec['unk'], (1,400))
         out = np.concatenate(padded_X)
-#         print(out.shape)
-#         out = out.to('cuda:0')
-#         out.required_grad = False
+
         batch_token.append(out)
     batch_token = np.stack(batch_token, axis = 0)
     batch_token = torch.Tensor(batch_token)
