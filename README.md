@@ -16,6 +16,10 @@ gdown 1-DiVYL7bIhtvrXotWyZPQt4oNmUgXQDE
 ```
 pip install -r requirements.txt
 
-python run.py
+python run.py\
+        --epochs 10\
+        --batch_size 32\
+        --max_sen_lem 300\
+        --lr 0.001
 
 ```
