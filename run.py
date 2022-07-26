@@ -9,6 +9,8 @@ from utils import create_batch_data
 import torch.nn as nn
 import torch.optim as optim
 from train_model import train
+import pickle
+
 def run(args):
     import gensim
 
