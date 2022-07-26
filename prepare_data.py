@@ -2,6 +2,9 @@ import glob
 import pandas as pd
 import tqdm
 
+
+lbs = ['Chinh tri Xa hoi',  'Khoa hoc', 'Phap luat',  'The gioi',  'Van hoa', 'Doi song', 'Kinh doanh', 'Suc khoe',   'The thao',  'Vi tinh']
+
 class Process_data():
     def __init__(self, lbs = None, is_train = True, is_save = True):
         self.id2lbs = lbs 
