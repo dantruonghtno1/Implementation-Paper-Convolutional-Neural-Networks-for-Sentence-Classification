@@ -16,4 +16,4 @@ class Param:
         parser.add_argument("--max_sen_len", default=300, type=int)
         parser.add_argument("--batch_size", default=32, type=int)
 
-        return 
+        return parser
