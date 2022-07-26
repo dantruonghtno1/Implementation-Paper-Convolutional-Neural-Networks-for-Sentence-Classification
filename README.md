@@ -3,8 +3,8 @@
 ## Download dataset
 
 ```
-gdown 171vJ_msiZp9uPLRLUwN2Fq719ZfilPTh
-gdown 17BO5HZtpU6JXc982CKTNpeDHWEgYo-DM
+>> gdown 171vJ_msiZp9uPLRLUwN2Fq719ZfilPTh
+>> gdown 17BO5HZtpU6JXc982CKTNpeDHWEgYo-DM
 ```
 
 ## Download word2vec pretrained for Vietnamese
