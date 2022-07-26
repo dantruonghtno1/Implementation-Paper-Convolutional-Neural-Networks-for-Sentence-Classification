@@ -14,6 +14,9 @@ gdown 1-DiVYL7bIhtvrXotWyZPQt4oNmUgXQDE
 ## Run
 
 ```
+apt-get install unrar
+unrar x Train_Full.rar
+unrar x Test_Full.rar
 pip install -r requirements.txt
 
 python run.py\
