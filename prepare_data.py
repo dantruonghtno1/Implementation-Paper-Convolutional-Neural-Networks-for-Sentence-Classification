@@ -1,6 +1,6 @@
 import glob
 import pandas as pd
-import tqdm
+from tqdm import tqdm
 
 
 lbs = ['Chinh tri Xa hoi',  'Khoa hoc', 'Phap luat',  'The gioi',  'Van hoa', 'Doi song', 'Kinh doanh', 'Suc khoe',   'The thao',  'Vi tinh']
